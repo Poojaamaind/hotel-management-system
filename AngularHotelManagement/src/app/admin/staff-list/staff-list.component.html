@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+ 
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+#mydiv{
+    margin-top: 95px;
+
+}
+
+h2{
+    text-align: center;
+}
+</style>
+</head>
+<body>
+    <div id='mydiv'>
+    <h2> Our Staffs</h2>
+
+<table>
+    <tr>
+        <th >Staff Id</th>
+        <th >Staff First Name</th>
+        <th >Staff Last Name</th>
+        <th >Phone Number</th>
+        <th >Role</th>
+        <th >Gender</th>
+        <th >Addess</th>
+        <th >Update</th>
+        <th >Delete</th>
+        <!-- <th>Show Details</th> -->
+      </tr>
+
+      <tr *ngFor="let staff of staffs | async">
+        <th scope="row">{{staff.staffId}}</th>
+      <td>{{staff.staffFirstName}} </td>
+      <td>{{staff.staffLastName}}</td>
+      <td>{{staff.phoneNumber}}</td>
+      <td><b>{{staff.role}}</b></td>
+      <td>{{staff.gender}}</td>
+      <td>{{staff.address}}</td>
+
+      <td><button (click)="updateStaff(staff)" class="btn btn-danger">Update</button></td>
+      <td> <button (click)="deleteStaff(staff.staffId)" class="btn btn-info" style="margin-left: 10px">Delete</button></td> 
+      <!-- <td><button (click)="staffDetails(staff.staffId)" class="btn btn-info" style="margin-left: 10px">Details</button></td> 
+       -->
+    </tr>
+</table>
+<br><br>
+<button value="Back" (click)="goBack()" style="align-items: center;">Back</button>
+</div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+ 
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+#mydiv{
+    margin-top: 95px;
+
+}
+
+h2{
+    text-align: center;
+}
+</style>
+</head>
+<body>
+    <div id='mydiv'>
+    <h2> Our Customers</h2>
+
+<table>
+    <tr>
+        <th >Customer Id</th>
+        <th >Customer First Name</th>
+        <th >Customer Last Name</th>
+        <th >Phone Number</th>
+        <th >Adhar Number</th>
+        <th >Gender</th>
+        <th >Addess</th>
+        <!-- <th >Update</th> -->
+        <th >Delete</th>
+        <th>Show Details</th>
+      </tr>
+
+      <tr *ngFor="let customer of customers | async">
+        <th scope="row">{{customer.customerId}}</th>
+      <td>{{customer.customerFirstName}} </td>
+      <td>{{customer.customerLastName}}</td>
+      <td>{{customer.phoneNumber}}</td>
+      <td>{{customer.adharNumber}}</td>
+      <td>{{customer.gender}}</td>
+      <td>{{customer.address}}</td>
+
+      <!-- <td><button (click)="updateCustomer(customer)" class="btn btn-danger">Update</button></td> -->
+      <td> <button (click)="deleteCustomer(customer.customerId)" class="btn btn-info" style="margin-left: 10px">Delete</button></td> 
+      <td><button (click)="customerDetails(customer.customerId)" class="btn btn-info" style="margin-left: 10px">Details</button></td> 
+      
+    </tr>
+</table>
+<br><br>
+<button value="Back" (click)="goBack()" style="align-items: center;">Back</button>
+</div>
+</body>
+</html>

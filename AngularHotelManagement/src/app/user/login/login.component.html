@@ -1,0 +1,40 @@
+<html>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<body >
+
+<div id="mydiv">
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <img src='..\assets\Images\user2.png' height="200" width="50" id="icon" />
+    </div>
+
+    <!-- Login Form -->
+    <form (ngSubmit)="onSubmit()" >
+      <input type="text" id="login" class="fadeIn second" name="username" placeholder="username" [(ngModel)]="user.username" required >
+	   <input type="password" id="password" class="fadeIn third" name="password" placeholder="password" [(ngModel)]="user.password" required>
+	  <select name="role" id="role" class="fadeIn third" [(ngModel)]="role"  name="role"required>
+		  <option value="Admin" >Admin</option>
+		  <option value="Customer">Customer</option>
+		  <option value="Staff">Staff</option>
+	  </select>
+      <input type="submit" class="fadeIn fourth" value="Log In">
+    </form>
+
+    <!-- Remind Passowrd -->
+    <!-- <div id="formFooter">
+	  <a class="underlineHover" href="#">Forgot Password?</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  <a class="underlineHover" href="#">New Registration</a>
+    </div> -->
+
+  </div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+.spacer {
+    flex: 1;
+  }
+
+  .toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    background-color: #1976d2;
+    color: white;
+    font-weight: 600;
+  }
+
+  .toolbar img {
+    margin: 0 16px;
+  }
+
+  span{
+    font-size: medium;
+    color: white;
+  }
+
+  #login{
+      margin-left: 940px;
+      font-weight:bold;
+     font-display:initial;
+  }
+
+  #logout{
+    margin-left: 1250px;
+}
+
+.fadeIn.fourth {
+	-webkit-animation-delay: 1s;
+	-moz-animation-delay: 1s;
+	animation-delay: 1s;
+  }
+
+  input[type=button], input[type=submit], input[type=reset] ,button {
+	background-color:  #1976d2;
+	border: none;
+	color:rgba(31, 20, 136, 0.4);
+	padding: 20px 40px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	text-transform: uppercase;
+    font-size: 18px;
+    font-weight:bold;
+	-webkit-box-shadow: 0 10px 30px 0 rgba(25, 126, 177, 0.4);
+	box-shadow: 0 10px 30px 0 rgba(41, 28, 150, 0.4);
+	-webkit-border-radius: 5px 5px 5px 5px;
+	border-radius: 5px 5px 5px 5px;
+	margin: 40px 20px 40px 20px;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+  }
+
+  a{
+    font-size: larger;
+    color: white;
+    text-decoration: underline;
+  }
